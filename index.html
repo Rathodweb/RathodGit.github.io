@@ -1,9 +1,10 @@
 <!-- comment -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>welcom</title>
     
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="discription" content="this is discription">
@@ -12,10 +13,15 @@
 
 </head>
 
-<body style="background-color:powderblue;">
+<body style="background-color:rgb(176, 230, 192);">
 
 <a ><h1 style="background-color: rgb(255, 187, 0);">Welcome to my webpage
 </h1></a>
+
+enter your name : <input type="text" id="nem"><br>
+<button id="butn3">click --here </button>
+<h1 style="color: rgb(240, 13, 58);" id="result3"> </h1>
+
 
                <p><em>hello this first my paragraph,
                    here you will get know about all content
@@ -130,6 +136,7 @@
             <td>rohan</td>
             <td>433</td>
             <td>programmer</td>
+            
         </tr>
         <tr>
             <td>jahsg</td>
@@ -143,9 +150,79 @@
         </tr>
     </tbody>
 </table>
-<p>
-    <button style="border-color: darkorange;">login</button>
-      </p>                       
+
+<div>
+    <br>
+   <h1 style="color: darkorange;"> function for displaying current time</h1>
+       <button id="mybutton" style="border-color: rgb(0, 156, 60);">click here to check date</button>
+     <p id="mypara">  </p>                     
+    </div>
+<center>
+     <h1 style="color: rgb(255, 6, 6);">Function For Addition of any two numbers  </h1>
+     
+     <div>
+     enter first number : <input id="value1"></div><br>
+     <div>enter second number: <input id="value2"></div>
+     <button id="addbttn">Add</button><br>
+    <p style="color: rgb(230, 10, 10);"> sum of numbers is : </p><p id="myresult">   </p>
+   
+    </center>
+
+<h1 style="color: rgb(43, 1, 231);">Function to find mothly Simple Interest</h1>
+
+<div>enter principle amount : <input id="pri"></div><br>
+<div>enter time ---------------- :<input id="tim"></div><br>
+<div>enter rate     --   ------- ------ :<input type="number" id="ret"></div><br>
+<div>click here to get interest : <button id="intbut">Get Interest</button></div>
+<p id="resul2"> </p>
+
+
+
+<script>
+
+document.getElementById("butn3").onclick = func3;
+function func3()
+{
+    let nam = document.getElementById("nem").value;
     
+    nam = "yakanna ohh";
+    res3 = nam;
+    document.getElementById("result3").innerHTML = nam;
+}
+
+
+
+document.getElementById("intbut").onclick = simple_int_calc;
+
+function simple_int_calc()
+{
+    let p = document.getElementById("pri").value;
+    let t = document.getElementById("tim").value;
+    let r = document.getElementById("ret").value;
+
+    let calc = (parseInt(p)*parseInt(t)*parseInt(r))/100;
+    document.getElementById("resul2").innerHTML = calc;
+}
+
+
+
+document.getElementById("mybutton").onclick=displaydate;
+
+function displaydate()
+{
+   document.getElementById("mypara").innerHTML =Date();
+}
+
+
+document.getElementById("addbttn").onclick = additionm;
+
+function additionm()
+{
+    let x=document.getElementById("value1").value;
+    let y=document.getElementById("value2").value;
+    let res=parseInt(x) + parseInt(y);
+    document.getElementById("myresult").innerHTML = res;
+}
+</script>
 </body>
-</html>
+</html
